@@ -1,0 +1,127 @@
+########## 1 level ################
+echo '<br>'.'<br>'.'Level 1';
+//////////    1    ////////////////
+echo '<br>'.'<br>'.'# 1'.'<br>';
+
+$lang = ['en','ru'];
+$i = rand(0,1);
+echo $lang[$i].'<br>';
+
+if($lang[$i] == 'ru') $arr = ['пн','вт','ср','чт','пт','сб','вс'];
+else $arr = ['mn','ts','wd','th','fr','st','sn'];
+print_r($arr);
+echo '<br>';
+
+switch($lang[$i]) {
+    case ($lang[$i] == 'ru'):
+        $arr = ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'];
+        break;
+    case ($lang[$i] == 'en'):
+        $arr = ['mn', 'ts', 'wd', 'th', 'fr', 'st', 'sn'];
+        break;
+}
+print_r($arr);
+echo '<br>';
+
+($lang[$i] == 'ru')? $arr = ['пн','вт','ср','чт','пт','сб','вс'] : $arr = ['mn','ts','wd','th','fr','st','sn'];
+print_r($arr);
+echo '<br>';
+
+//////////    2    ////////////////
+echo '<br>'.'# 2'.'<br>';
+
+$month = rand(1,12);
+echo $month.'<br>';
+
+if (($month == 12 ) || ($month <= 2)) echo 'Winter'.'<br>';
+elseif(($month > 2) && ($month <= 5)) echo 'Spring'.'<br>';
+elseif(($month > 5) && ($month <= 8)) echo 'Summer'.'<br>';
+else echo 'Autumn'.'<br>';
+
+switch ($month){
+    case (($month == 12 ) || ($month <= 2)):
+        echo 'Winter'.'<br>';
+        break;
+    case (($month > 2) && ($month <= 5)):
+        echo 'Spring'.'<br>';
+        break;
+    case (($month > 5) && ($month <= 8)):
+        echo 'Summer'.'<br>';
+        break;
+    default:
+        echo 'Autumn'.'<br>';
+        break;
+}
+
+echo (($month == 12 ) || ($month <= 2))? 'Winter'.'<br>' : (
+    (($month > 2) && ($month <= 5))? 'Spring'.'<br>' : (
+    (($month > 5) && ($month <= 8))? 'Summer'.'<br>' : 'Autumn'.'<br>'));
+
+//////////    3    ////////////////
+echo '<br>'.'# 3'.'<br>';
+
+$minutes = rand(1,60);
+echo $minutes.'<br>';
+
+if ($minutes <= 15) echo '1'.'<br>';
+elseif (($minutes > 15) && ($minutes <= 30)) echo '2'.'<br>';
+elseif (($minutes > 30) && ($minutes <= 45)) echo '3'.'<br>';
+else echo '4'.'<br>';
+
+switch ($minutes){
+    case ($minutes <= 15):
+        echo '1'.'<br>';
+        break;
+    case (($minutes > 15) && ($minutes <= 30)):
+        echo '2'.'<br>';
+        break;
+    case (($minutes > 30) && ($minutes <= 45)):
+        echo '3'.'<br>';
+        break;
+    default: echo '4'.'<br>';
+}
+
+echo ($minutes <= 15)? '1'.'<br>' : (
+    (($minutes > 15) && ($minutes <= 30))? '2'.'<br>': (
+    (($minutes > 30) && ($minutes <= 45))? '3'.'<br>' : '4'.'<br>'));
+
+//////////    4    ////////////////
+echo '<br>'.'# 4'.'<br>';
+
+$a = 2;
+echo $a.'<br>';
+
+if (($a == 0) || ($a == 2)) $a += 7;
+else $a /= 10;
+echo $a.'<br>';
+
+switch ($a){
+    case (($a == 0) || ($a == 2)):
+        $a += 7;
+        break;
+    default: $a /= 10;
+}
+echo $a.'<br>';
+(($a == 0) || ($a == 2))? $a += 7 : $a /= 10;
+
+echo $a.'<br>';
+
+//////////    5    ////////////////
+echo '<br>'.'# 5'.'<br>';
+
+$a = 3;
+$b = 5;
+echo '$a'.' = '.$a. ' '.'$b'.' = '.$b.'<br>';
+
+if (($a <= 1) && ($b >= 3)) echo $a + $b.'<br>';
+else echo $b - $a.'<br>';
+
+switch ($a){
+    case (($a <= 1) && ($b >= 3)):
+        echo $a + $b.'<br>';
+        break;
+    default:
+        echo $b - $a.'<br>';
+}
+
+echo (($a <= 1) && ($b >= 3))? $a + $b.'<br>' : $b - $a.'<br>';

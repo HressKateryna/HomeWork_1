@@ -1,0 +1,73 @@
+echo "#1".'<br>'.'<br>';
+function sumStr($str){
+    $arr = str_split($str);
+    $sum = 0;
+    for ($i = 0; $i < count($arr); $i++){
+        $sum += $arr[$i];
+    }
+    echo $sum.'<br>';
+    return true;
+}
+
+$str = '12346';
+sumStr($str);
+
+echo '<br>'."#2".'<br>'.'<br>';
+function numDig($str, $a){
+    $arr = str_split($str);
+    $num = 0;
+    for ($i = 0; $i < count($arr); $i++){
+        if ($arr[$i] == $a) $num++;
+    }
+    echo $num;
+    return true;
+}
+$str = '1,1,1,2,3,4,5,6,1,1,1,1,1,1';
+numDig($str, '1');
+
+echo '<br>'."#3".'<br>'.'<br>';
+function divRem($num) {
+    $arr = [];
+    $t = 0;
+    for ($i = 1; $i <= $num; $i++){
+        if($num % $i == 0){
+            $arr[$t] = $i;
+            $t++;
+        }
+    }
+    echo $num.'<br>';
+    echo '<pre>';
+    print_r($arr);
+    echo '</pre>';
+    return true;
+}
+
+divRem(1234);
+
+echo '<br>'."#4".'<br>'.'<br>';
+
+function patroN($str){
+    $str = ucwords($str);
+    $arr = explode(' ', $str);
+    echo $arr[0].' '.$arr[1]{0}.'. '.$arr[2]{0}.'.';
+}
+patroN("Hress kateryna sergeevna");
+
+
+echo '<br>'."#6".'<br>'.'<br>';
+function divFiv($num){
+    $a = [];
+    $t = 0;
+    for ($i = 0; $i < 100; $i++){
+        if ($i % $num == 0){
+            $a[$t] = $i;
+            $t++;
+        }
+    }
+    echo $num.'<br>';
+    echo '<pre>';
+    print_r($a);
+    echo '</pre>';
+    return true;
+}
+divFiv('5');
