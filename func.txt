@@ -1,0 +1,140 @@
+echo 'Практика'.'<br>'.'<br>';
+echo '#1'.'<br>';
+$host = 'localhost';
+$db_user = 'root';
+$db_pass = '';
+$db_name = 'test';
+$mysqli = new mysqli($host, $db_user, $db_pass, $db_name);
+
+if(mysqli_connect_errno()){
+    printf("Connect failed: %s", mysqli_connect_error());
+    exit;
+}
+
+$session = [];
+$query = "SELECT * FROM test_user";
+
+if($result = $mysqli -> query($query)){
+    while ($obj = $result -> fetch_assoc()){
+        $session[] = $obj;
+    }
+    $result -> close();
+}
+$session = $session;
+
+$mysqli -> close();
+
+$m = [];
+$i = 0;
+foreach ($session as $arr) {
+    $pos = strpos($arr['gender'], "ж");
+    if ($pos === false) {
+    }else{
+            $m[$i] = $arr["last_name"];
+            $i++;
+    }
+}
+
+function march8($name) {
+    return 'Хоршего праздника! Дорогая, '.$name.') С первым днем весны!:3';
+}
+
+
+for ($i = 0; $i < count($m); $i++) echo march8($m[$i]).'<br>';
+
+echo '<br>'.'#2'.'<br>';
+
+function col(){
+    echo func_num_args();
+}
+
+col(1, 2, 3, 4, 0, 2);
+
+echo '<br>'.'<br>'.'#3'.'<br>';
+
+
+function weak($a){
+    $weak = [
+        '1'=>'Понедельник',
+        '2'=>'Вторник',
+        '3'=>'Среда',
+        '4'=>'Четверг',
+        '5'=>'Пятница',
+        '6'=>'Суббота',
+        '7'=>'Воскресенье'];
+
+    foreach ($weak as $key => $value){
+        if ($key == $a) echo $value;
+    }
+
+
+
+//    switch ($a){
+//        case 1: echo 'Понедельник'.'<br>';
+//            break;
+//        case 2: echo 'Вторник'.'<br>';
+//            break;
+//        case 3: echo 'Среда'.'<br>';
+//            break;
+//        case 4: echo 'Четверг'.'<br>';
+//            break;
+//        case 5: echo 'Пятница'.'<br>';
+//            break;
+//        case 6: echo 'Суббота'.'<br>';
+//            break;
+//        case 7: echo 'Воскресенье'.'<br>';
+//            break;
+//    }
+}
+$d = date("w");
+weak($d);
+
+echo '<br>'.'<br>'.'#4'.'<br>';
+
+function num($arr, $t, $mn){
+    $a = $arr[0];
+    for ($i = 0; $i < $t; $i++){
+        if($mn == 1){
+            if ($arr[$i] > $a){
+                $a = $arr[$i];
+            }
+        }elseif ($mn == 2){
+            if ($arr[$i] < $a){
+                $a = $arr[$i];
+            }
+        }
+    }
+    echo ($a).'<br>';
+}
+
+$mas = [-5, 112, 1, 999, 3, 2, -999];
+$t = count($mas);
+num($mas, $t, 1);
+
+function dd($arr){
+    echo '<pre>';
+    print_r($arr);
+    echo '</pre>';
+}
+
+echo '#1'.'<br>';
+function masSr($arr1, $arr2){
+    $count1 = count($arr1);
+    $count2 = count($arr2);
+    if ($count1 < $count2) $count = $count1;
+    else $count = $count2;
+    $a = 0;
+    $arr = [];
+    for($i = 0; $i < $count; $i++){
+        $arr[$i] = abs($arr1[$i] - $arr2[$i]);
+        if ($arr[$i] > $a) $a = $arr[$i];
+    }
+    dd($arr1);
+    dd($arr2);
+    dd($arr);
+    echo $a;
+}
+
+$a = [1,2,3,4,5];
+$b = [5,4,9,2,1,5,6,3];
+masSr($a,$b);
