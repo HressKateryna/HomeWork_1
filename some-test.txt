@@ -1,0 +1,21 @@
+echo '#1'.'<br>';
+function masSr($arr1, $arr2){
+    $count1 = count($arr1);
+    $count2 = count($arr2);
+    if ($count1 < $count2) $count = $count1;
+    else $count = $count2;
+    $a = 0;
+    $arr = [];
+    for($i = 0; $i < $count; $i++){
+        $arr[$i] = abs($arr1[$i] - $arr2[$i]);
+        if ($arr[$i] > $a) $a = $arr[$i];
+    }
+    dd($arr1);
+    dd($arr2);
+    dd($arr);
+    echo $a;
+}
+
+$a = [1,2,3,4,5];
+$b = [5,4,9,2,1,5,6,3];
+masSr($a,$b);
