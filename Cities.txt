@@ -1,0 +1,29 @@
+echo '# Города'.'<br>';
+
+function strSplit($str, $a){
+    if ($a == 0){
+        $arr = str_split($str);
+        return $arr[0];
+    }elseif ($a == 1){
+        $arr = str_split($str);
+        $count = count($arr);
+        return $arr[$count - 1];
+    }else return false;
+}
+
+function city($arr, $city){
+    $count = count($arr);
+    if ($count != 1) {
+        for ($i = 0; $i <= $count; $i++) {
+            if (strSplit($city, 1) == strSplit($arr[$i], 0)) {
+                echo $arr[$i].'<br>';
+                $a = $arr[$i];
+                unset($arr[$i]);
+                city($arr, $a);
+            }
+        }
+    }
+}
+$cities = ['berlin','krakow','sydney','nairobi','yerevan','new york','washington','izmir','naples'];
+echo $cities[0].'<br>';
+city($cities, $cities[0]);
