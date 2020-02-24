@@ -34,6 +34,7 @@ CREATE TABLE `act_flm` (
 
 LOCK TABLES `act_flm` WRITE;
 /*!40000 ALTER TABLE `act_flm` DISABLE KEYS */;
+INSERT INTO `act_flm` VALUES (1,2),(2,6),(3,4),(4,1),(4,4),(4,8),(5,3),(6,3),(7,7),(8,5),(8,6),(9,4),(10,1),(11,2),(12,1),(13,1),(13,8),(14,4),(15,3);
 /*!40000 ALTER TABLE `act_flm` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -50,7 +51,7 @@ CREATE TABLE `actors` (
   `name` varchar(25) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT ' ',
   `age` int(5) DEFAULT 36,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -59,6 +60,7 @@ CREATE TABLE `actors` (
 
 LOCK TABLES `actors` WRITE;
 /*!40000 ALTER TABLE `actors` DISABLE KEYS */;
+INSERT INTO `actors` VALUES (1,'Љг«ЁЄ®ў ','Њ аЁп',32),(2,'Ѓ®­¤ аҐ­Є®','‘в ­Ёб« ў',42),(3,'Џ ­дЁ«®ў','ЌЁЄЁв ',35),(4,'ЏаЁ«гз­л©','Џ ўҐ«',31),(5,'ЂавҐ¬мҐў ','‹о¤¬Ё« ',51),(6,'‚ бЁ«мҐў','Ђ­ в®«Ё©',54),(7,'Љ«Ё¬®ў ','…Є вҐаЁ­ ',32),(8,'ђ в­ЁЄ®ў','Ђ«ҐЄб ­¤а',36),(9,'ЂЄбҐ­®ў ','‹оЎ®ўм',29),(10,'Ђ­в®­','• Ў а®ў',43),(11,'ЂўҐаЁ­','Њ ЄбЁ¬',43),(12,'‹®§ ','…ўЈҐ­Ёп',34),(13,'ЊгжҐ­ЁҐжҐ','ЂЈ в ',30),(14,'ђ §г¬®ўбЄ п','Љ аЁ­ ',28),(15,'„®Ўа®­а ў®ў','”Ґ¤®а',56);
 /*!40000 ALTER TABLE `actors` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -74,7 +76,7 @@ CREATE TABLE `film` (
   `name` varchar(25) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT ' ',
   `release_y` int(11) DEFAULT 2001,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -83,6 +85,7 @@ CREATE TABLE `film` (
 
 LOCK TABLES `film` WRITE;
 /*!40000 ALTER TABLE `film` DISABLE KEYS */;
+INSERT INTO `film` VALUES (1,'‡ Єалв п иЄ®« ',2011),(2,'‘Є«Ёд®б®ўбЄЁ©',2012),(3,'‘ў вл',2008),(4,'Њ ¦®а',2012),(5,'Њ®бЄ®ўбЄ п Ў®а§ п',2014),(6,'Љ ЇЁв ­и ',2016),(7,'Њ®«®¤Ґ¦Є ',2014),(8,'ЉўҐбв',2018);
 /*!40000 ALTER TABLE `film` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -121,7 +124,7 @@ CREATE TABLE `producer` (
   `name` varchar(25) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT ' ',
   `age` int(5) DEFAULT 36,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -142,4 +145,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-02-20 12:05:20
+-- Dump completed on 2020-02-24 14:06:50

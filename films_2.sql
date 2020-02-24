@@ -108,6 +108,7 @@ CREATE TABLE `flm_prd` (
 
 LOCK TABLES `flm_prd` WRITE;
 /*!40000 ALTER TABLE `flm_prd` DISABLE KEYS */;
+INSERT INTO `flm_prd` VALUES (1,2),(1,3),(2,1),(3,1),(3,2),(4,2),(5,1),(5,3),(6,2),(7,2),(8,1),(8,2);
 /*!40000 ALTER TABLE `flm_prd` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -124,7 +125,7 @@ CREATE TABLE `producer` (
   `name` varchar(25) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT ' ',
   `age` int(5) DEFAULT 36,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -133,6 +134,7 @@ CREATE TABLE `producer` (
 
 LOCK TABLES `producer` WRITE;
 /*!40000 ALTER TABLE `producer` DISABLE KEYS */;
+INSERT INTO `producer` VALUES (1,'Asadulin','Oleg',32),(2,'ѓ®а®ЎҐж','Њ аЄ',32),(3,'Ља б­®ў ','ћ«Ёп',29);
 /*!40000 ALTER TABLE `producer` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -145,4 +147,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-02-24 14:07:48
+-- Dump completed on 2020-02-24 15:05:25
