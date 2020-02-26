@@ -1,1 +1,1 @@
-HomeWork_1
+select students.name as Name, students.surname as Surname, groops.title as Groop,teachers.surname as Surname_Teachers, teachers.name as Name_Teacher, teachers.midlename as Middlename_Teacher from students inner join st_gr on (students.id = id_st) inner join groops on (st_gr.id_gr = groops.id) inner join gr_tch on ( groops.id = gr_tch.id_gr) inner join teachers on (id_tch = teachers.id);
