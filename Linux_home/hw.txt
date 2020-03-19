@@ -1,0 +1,18 @@
+#1
+
+mkdir harry_potter_homeWork
+cd harry_potter_homework
+wget https://en.wikipedia.org/wiki/Harry_Potter
+cat Harry_Potter | grep Harry | wc -l    // 498
+cat Harry_Potter | grep Lord | wc -l     //11
+cat Harry_Potter | grep Hogwarts | wc -l // 42
+
+
+#2
+
+cat Harry_Potter | grep Harry | wc -l    >> countHP  
+cat Harry_Potter | grep Lord | wc -l     >> countHP  
+cat Harry_Potter | grep Hogwarts | wc -l >> countHP 
+
+
+#3
