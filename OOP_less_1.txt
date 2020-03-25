@@ -1,0 +1,39 @@
+<?php
+class Animals{
+    private $name, $age, $class;
+
+    function __construct($arr){
+        $this->name = $arr[0];
+        $this->age = $arr[1];
+        $this->class = $arr[2];
+    }
+
+    function getName(){
+            return "Animal name is ". $this->name. ". And it is ". $this->class. "."."</br>";
+    }
+}
+
+class Cat extends Animals{
+    private $breed, $home;
+
+    function __construct($arr){
+        parent::__construct($arr);
+        $this->breed = $arr[3];
+        $this->home = $arr[4];
+    }
+
+    function printInfo(){
+        echo parent::getName();
+        return ($this->home == true) ? "This is pet. " : "This isn`t pet.";
+
+    }
+}
+
+//$anim1 = ["Alisa", 5, "dog"];
+$anim2 = ["Sara", 6, "cat", "siamese", true];
+
+//$dog = new Animals($anim1);
+//echo $dog->printName();
+
+$cat = new Cat($anim2);
+echo $cat->printInfo();
