@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	    <title>HomeL27</title>
+	</head>
+    <body>
+
+    </body>
+    <script type="text/javascript">
+    	//_________________#1_______________//
+    	let str = "Hi!";
+    	let num = 123;
+    	let flag = true;
+    	let txt = "true";
+
+    	console.log (typeof str);
+    	console.log (typeof num);
+    	console.log (typeof flag);
+    	console.log (typeof txt);           
+
+    	//_________________#2_______________//
+    	let a = 5;
+    	let b = 3;
+
+    	let a1 = a + b;
+    	let a2 = a - b;
+    	let a3 = a * b;
+    	let a4 = a / b;         
+
+    	console.log(a1, a2, a3, a4);        
+
+    	//_________________#3_______________//
+
+    	let a5 = a % b;
+    	let a6 = b % a;
+    	let a7 = a + '3';
+    	let a8 = '5' - b;
+    	let a9 = 75 + 'kg';
+
+    	console.log(a5, a6, a7, a8, a9);     
+
+    	//_________________#4_______________//
+
+    	let height = 23;
+    	let width = 10;
+    	let s = height * width;
+    	console.log(s);           
+
+    	//_________________#5_______________//
+
+    	let height = 10;
+    	let diameter = 4;
+    	let pi = 3.141592653589793238462643383279502;
+    	let v = (pi / 4) * (diameter * diameter) * height;
+    	console.log(v);                                        
+
+    	//_________________#6_______________//
+
+    	let n = 3;
+    	let m = 4;
+    	let k = Math.pow(((n * n) + (m * m)), (1/2));
+    	console.log(k);                                 
+
+    	//_________________#7_______________//
+
+    	let m = 23;
+    	let n;
+
+    	m < 50 ? n = "small" : n = "big";
+
+    	console.log(n);                          
+
+
+    	//_________________#8_______________// 7 раз выполнится 
+
+    	let i = 2;
+    	while(i < 9){
+    		console.log(i++);
+    	}                          
+
+    	//_________________#9_______________//
+
+    	let i = 45;
+    	while(i < 68){
+    		console.log(i++);
+    	}                           
+
+    	//_________________#10_______________//
+  	 	let i = 45;
+    	for(i; i <= 670; i++){
+    		if (i % 10 == 0) {
+    			console.log(i);
+    		}
+    	}                      
+
+
+    	//_________________#11_______________//   
+    	let n = 7;
+    	switch(n){
+    		case 1: 
+    			console.log('one');
+    			break;
+    		case 2: 
+    			console.log('two');
+    			break;
+    		case 3: 
+    			console.log('three');
+    			break;
+    		case 4: 
+    			console.log('four');
+    			break;
+    		case 5: 
+    			console.log('five');
+    			break;
+    		case 6: 
+    			console.log('six');
+    			break;
+    		case 7: 
+    			console.log('seven');
+    			break;
+    		case 8: 
+    			console.log('eight');
+    			break;
+    		case 9: 
+    			console.log('nine');
+    			break;
+    	}                                      
+
+    	//_________________#12_______________// 
+
+    	function hello(){
+    		console.log("Hi, my darling!)");
+    	}
+    	hello();                                
+
+    	//_________________#13_______________// 
+
+    	function hello(name){
+    		let str = "Hello, ";
+    		if (name) str = str + name;
+    		else str = str + "guest";
+    		console.log(str);
+    	}
+
+    	hello();                         
+
+    	//_________________#14_______________//
+    	function mul(n, m) {
+    		console.log(n * m);
+    	}
+    	mul(3, 5);                                  
+
+    	//_________________#15_______________//
+
+    	function repeat(str, n) {
+    		let str1 = '';
+    		if (!n) n = 2;
+    		if (!str) str = '';
+    		for (let i = 0; i < n; i++) {
+    			str1 = str1 + str;
+    		}
+    		console.log(str1);
+    	}
+
+    	repeat('al', 3);                  
+
+    	//_________________#16_______________//
+    	function rgb(a, b, c) {
+    		let str = "rgb(" + a +', ' + b + ', ' + c +')';
+    		console.log(str);
+    	}
+
+    	rgb(13, 56, 67);                 
+
+    	//_________________#17_______________//
+
+    	function avg() {
+    		let len = arguments.length;
+    		let sum = 0;
+    		for (let i = 0; i < len; i++){
+    			sum += arguments[i];
+    		}
+    		let sr = sum / len;
+    		console.log(sr);
+    	}
+
+    	avg(2, 4, 6, 8);              
+    </script>
+</html>
