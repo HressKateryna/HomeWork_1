@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	    <title>HomeL28</title>
+	</head>
+    <body>
+
+    </body>
+    <script type="text/javascript">
+        //_________________#1________________
+
+        let city1 = {};
+        city1.name = "Seattle";
+        city1.population = "744 955";
+        
+
+        //_________________#2________________
+
+        let city2 = {
+            name: "Vancouver",
+            population: "675 218",
+        }
+       
+        //_________________#3________________
+
+        city1.getName = function (){
+            return city1.name;
+        }
+
+        city2.getName = function (){
+            return city2.name;
+        }
+
+
+        //_________________#4________________
+
+        city1.exportStr = function(){
+            for(let i in city1){
+                if (typeof(city1[i]) != 'function') {
+                    console.log(i + " = " + city1[i]);
+                }    
+            }
+        }
+
+        city2.exportStr = function(){
+            for(let i in city2){
+                if (typeof(city2[i]) != 'function') {
+                    console.log(i + " = " + city2[i]);
+                }    
+            }
+        }
+
+        //_________________#5________________
+        function getObj(){
+            return this;
+        }
+        city1.getCity = getObj;
+        city2.getCity = getObj;
+
+        //_________________#6________________
+        //_________________#7________________
+        let d1 = [1, 2, 3, 4];
+        d1[7] = 6;
+
+        console.log(d1);
+
+        //_________________#8________________
+        let d2 = [1, 2, 3, 4];
+        let sum2 = 0;
+        for(let i = 0; i < 4; i++){
+            sum2 =sum2 + d2[i];
+        }
+
+        console.log(sum2);
+
+        
+        
+
+    </script>
+</html>
